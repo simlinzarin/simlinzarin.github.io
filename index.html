@@ -4,15 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Simlin Zarin, MPH, is a doctoral student in Public Health Sciences at Texas A&M University. Explore her work on air pollution, birth outcomes, and safe water.">
-  <meta name="theme-color" content="#fcfaf5">
+  <meta name="theme-color" content="#f5f7f2">
   <title>Simlin Zarin, MPH | Public Health Research</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="shell header">
     <a class="wordmark" href="#main">Simlin Zarin<span>, MPH</span></a>
-    <nav aria-label="Main navigation">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="sr-only">Toggle navigation</span>
+      <span></span><span></span>
+    </button>
+    <nav id="site-nav" aria-label="Main navigation">
       <a href="#research">Research</a>
       <a href="#background">Background</a>
       <a href="#connect">Connect</a>
@@ -25,7 +30,10 @@
         <h1 id="name">Simlin<br>Zarin<span>.</span></h1>
         <p class="role">Doctoral student in Public Health Sciences</p>
         <p class="intro">My work explores how environmental exposures shape health, from air pollution and birth outcomes to safe water in South Texas.</p>
-        <a class="button" href="#research">Explore my research</a>
+        <div class="hero-actions">
+          <a class="button" href="#research">Explore my research <span aria-hidden="true">↗</span></a>
+          <a class="quiet-link" href="#connect">Let's connect</a>
+        </div>
       </div>
       <div class="hero-art" aria-hidden="true">
         <div class="contours"></div>
@@ -35,9 +43,13 @@
     </section>
 
     <section id="research" class="section" aria-labelledby="research-title">
-      <h2 id="research-title">Selected research</h2>
-      <article class="research-row">
-        <p class="eyebrow">Environmental epidemiology</p>
+      <div class="section-heading">
+        <p class="eyebrow">What I study</p>
+        <h2 id="research-title">Selected research</h2>
+      </div>
+      <div class="research-grid">
+      <article class="research-card">
+        <div class="card-topline"><span class="card-number">01</span><p class="eyebrow">Environmental epidemiology</p></div>
         <div>
           <h3>Air pollution and birth outcomes</h3>
           <p>A study of how air pollution and maternal factors were associated with birth defects across U.S. counties from 2016 to 2023. The analysis combined national natality and air quality data with spatial analysis.</p>
@@ -45,27 +57,31 @@
           <a class="text-link" href="https://www.deltaomega.org/student-poster-sessions/">View the Delta Omega poster listing</a>
         </div>
       </article>
-      <article class="research-row">
-        <p class="eyebrow">Water quality</p>
+      <article class="research-card">
+        <div class="card-topline"><span class="card-number">02</span><p class="eyebrow">Water quality</p></div>
         <div>
           <h3>South Texas Safe Water Project</h3>
           <p>I contributed as a student research assistant to a Texas A&amp;M initiative that studies water quality and access to safe water in South Texas communities.</p>
           <a class="text-link" href="https://tbt.tamu.edu/_files/_documents/safe-water-project-2022-2023.pdf">Read the project report (PDF)</a>
         </div>
       </article>
+      </div>
     </section>
 
     <section id="background" class="section" aria-labelledby="background-title">
-      <h2 id="background-title">Academic background</h2>
+      <div class="section-heading">
+        <p class="eyebrow">The foundation</p>
+        <h2 id="background-title">Academic background</h2>
+      </div>
       <div class="background">
-        <div>
+        <div class="info-card">
           <h3>Education</h3>
           <ul class="credentials">
             <li><strong>Doctoral studies in Public Health Sciences</strong><span>Texas A&amp;M University · 2024–present</span></li>
             <li><strong>Master of Public Health</strong><span>Texas A&amp;M University · 2024</span></li>
           </ul>
         </div>
-        <div>
+        <div class="info-card">
           <h3>Honors</h3>
           <ul class="credentials">
             <li><strong>Epidemiology and Biostatistics Departmental Scholarship</strong><span>Texas A&amp;M School of Public Health · 2024</span></li>
@@ -80,12 +96,11 @@
         <h2 id="connect-title">Connect</h2>
         <p>Find me on LinkedIn to get in touch or follow my research.</p>
       </div>
-      <a class="button button-light" href="https://www.linkedin.com/in/simlin-zarin-mph
--6b084b12b">Connect on LinkedIn</a>
+      <a class="button button-light" href="https://www.linkedin.com/in/simlin-zarin-mph-6b084b12b">Connect on LinkedIn <span aria-hidden="true">↗</span></a>
     </section>
   </main>
   <footer class="shell footer">
-    <span>Simlin Zarin, MPH</span>
+    <span>© <span id="year"></span> Simlin Zarin, MPH</span>
     <a href="#main">Back to top</a>
   </footer>
 </body>
